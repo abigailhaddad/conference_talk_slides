@@ -125,7 +125,7 @@ Author: Abigail Haddad Date: October 19, 2023
 
 ------------------------------------------------------------------------
 
-# Big range of job title labels!
+
 
  
 
@@ -163,33 +163,25 @@ Author: Abigail Haddad Date: October 19, 2023
 
 # Spot Checking Title Sets
 
-------------------------------------------------------------------------
+---
 
 # Data Scientist, Data Analyst, Software Engineer
 
-![center](images\data_sci_data_analyst_software_dev.jpg)
+![center](images/data_sci_data_analyst_software_dev.jpg)
 
 ---
-# 
-# 
-#
-#
-#
-#
+
 # Data Scientist, Data Analyst, Business Intelligence Analyst, Machine Learning Engineer, Artificial Intelligence Specialist, Data Engineer
 
-![center](images\data_sci_data_analyst_ml_ai.jpg)
+![center](images/data_sci_data_analyst_ml_ai.jpg)
+
 ---
 
-# 
+# Data [Analyst, Architect, Scientist Manager]
 
-# 
+![center](images/data_architect.jpg)
 
-# Data Analyst, Data Architect, Data Scientist, Data Manager
-
-![center](images\data_architect.jpg)
-
-------------------------------------------------------------------------
+----
 
 What's better than ad hoc assessment?
 
