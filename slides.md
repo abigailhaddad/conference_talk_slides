@@ -10,7 +10,7 @@ Author: Abigail Haddad Date: October 19, 2023
 
 ------------------------------------------------------------------------
 
-# I'm a data scientist, not a {data analyst, business intelligence analyst, software engineer}
+# I'm a data scientist, not a {data analyst, business intelligence analyst, software engineer, program manager}
 
 # 
 
@@ -51,20 +51,6 @@ Author: Abigail Haddad Date: October 19, 2023
 
 ------------------------------------------------------------------------
 
-# Assessing classification problems
-
-## Derivative metrics
-
-| **Metric**                            | **Value** |
-|---------------------------------------|-----------|
-| Recall (True Positive Rate)           | 95%       |
-| Specificity (True Negative Rate)      | 94%       |
-| Precision (Positive Predictive Value) | 94%       |
-| NPV (Negative Predictive Value)       | 95%       |
-
-------------------------------------------------------------------------
-
-# 
 
 # Back to USAJobs Listings
 
@@ -74,40 +60,47 @@ Author: Abigail Haddad Date: October 19, 2023
 
 # Example 'Duties' Text
 
-![center](images/duties_no_highlights.jpg)
+![center](images/data_engineer_duties.jpg)
 
 ------------------------------------------------------------------------
 
-# Example 'Duties' Text with Highlights
+# This position is officially titled "Data Scientist"
 
-![center](images/duties_highlight.jpg)
+* My model accurately identified it "Data Engineer"
+* Also, this position is misclassified! It's a 2210
+* This is the kind of analysis we can do with this model
 
 ------------------------------------------------------------------------
 
 ## **We can't overcome text ambiguity problems with LLMs. If the information isn't there, it's not there.**
 
+
+------------------------------------------------------------------------
+
+# I'm not going to say who did this
+
+![center](images/cool_story_bro.jpg)
+
+
+
 ------------------------------------------------------------------------
 
 # My MVP Project Workflow
 
-1.  Pulled 843 1560 Data Scientist job listings.
+1.  Pulled ~850 1560 Data Scientist job listings.
 2.  Dropped those with no duty list via length/keyword filter.
-3.  Multi-label classification via GPT-3.5 3a. Assess consistency scores/inter-rater reliability
-4.  Analysis of results 4a. BERT encoding of labels, clustering. 4b. GPT labels of clusters 4c. Word cloud 4d. Ad hoc validation of results
+3.  Used the Marvin library to get structured output from GPT 3.5 for several problems, including the multi-class classification problem.
+4. Ad hoc analysis, iteration
 
 ------------------------------------------------------------------------
 
-# What can we actually get from this?
 
- 
+# The only (Python) code you need
 
- 
+## Or why you should use Marvin (even if you're working in R)
 
- 
+![center](images/only_code_you_need.jpg)
 
- 
-
- 
 
 ------------------------------------------------------------------------
 
@@ -115,8 +108,10 @@ Author: Abigail Haddad Date: October 19, 2023
 
 -   A view of the variety of different roles that are under 1560
 -   A prototype job labeling system for applicants
--   A way to highlight jobs that might be mislabeled or challenging to hire for
+-   A way to highlight jobs that might be mislabeled, challenging to hire for, or misclassified
 -   A variable that might be predictive for research and analysis
+
+------------------------------------------------------------------------
 
 # What this can't be
 
@@ -125,107 +120,65 @@ Author: Abigail Haddad Date: October 19, 2023
 
 ------------------------------------------------------------------------
 
+# What Did We Get? 
 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-![bg](images/wordcloud.jpeg)
+1. Overall differences in top titles
+2. Job titles that never appear in the official title field
+3. Spot checks
 
 ------------------------------------------------------------------------
 
-| Cluster                               | \%  | Top 5 Titles                                                                                        |
-|----------------|----------------|-----------------------------------------|
-| Data & Project Management             | 34  | Data Scientist, Project Manager, Data Analyst, Program Manager, Supervisor                          |
-| Core Data Science & Engineering       | 22  | Data Scientist, Data Analyst, Machine Learning Engineer, Data Engineer, Statistical Analyst         |
-| Data Science & Research               | 17  | Data Scientist, Data Analyst, Research Scientist, Data Engineer, Database Administrator             |
-| Data Strategy & Specialization        | 16  | Data Analyst, Data Strategist, Geospatial Analyst, Supervisory Data Scientist, Chief Data Scientist |
-| Data Analysis & Research Intelligence | 10  | Data Analyst, Data Scientist, Business Intelligence Analyst, Statistical Analyst, Research Analyst  |
+### Comparing Top 10 Job Titles -- LLM vs. Official
+#
+
+![center](images/top_n_titles.png)
 
 ------------------------------------------------------------------------
 
-# Spot Checking Title Sets
+###
+# New Job Titles
+
+### Some of these are descriptive 🌟🌟🌟
+
+![center](images/wordcloud.png)
+
+------------------------------------------------------------------------
+
+
+# Examples of big title discrepencies
 
 ---
 
-# Data Scientist, Data Analyst, Software Engineer
+## Generated Title: Data Analyst
 
-![center](images/data_sci_data_analyst_software_dev.jpg)
-
----
-
-# Data Scientist, Data Analyst, Business Intelligence Analyst, Machine Learning Engineer, Artificial Intelligence Specialist, Data Engineer
-
-![center](images/data_sci_data_analyst_ml_ai.jpg)
+![center](images/data_analyst.jpg)
 
 ---
 
-# Data [Analyst, Architect, Scientist Manager]
+## Generated Title: Technical Program Manager
 
-![center](images/data_architect.jpg)
+![center](images/tpm.jpg)
+
 
 ----
 
 What's better than ad hoc assessment?
 
-**Systematic assessment!**
+**🎉 Systematic assessment! 🎉**
 
 ------------------------------------------------------------------------
 
-# Derivative Metrics Revisited
 
-| Metric Name               | Acronym | Definition                                                                                            |
-|-------------------------------|------------------|-----------------------|
-| Recall                    | TPR     | The percentage of actual positives that the model correctly identified.                               |
-| Specificity               | TNR     | The percentage of actual negatives that the model correctly identified.                               |
-| Precision                 | PPV     | Out of all the instances labeled as positives by the model, the percentage that are actual positives. |
-| Negative Predictive Value | NPV     | Out of all the instances labeled as negatives by the model, the percentage that are actual negatives. |
+# I tried a lot of other things, too
+
+* Named entity recognition for finding tools and software 🚀 
+* Grouping by category (BI intelligence, management, etc.) 🤷‍♂️
+* Comparing actual titles and generated titles 👎 
 
 ------------------------------------------------------------------------
 
-# Assessment Example with Synthetic Data
 
-| Label           | TPR (Recall) | TNR (Specificity) | PPV (Precision) | NPV |
-|-----------------|--------------|-------------------|-----------------|-----|
-| Data Scientist  | 23%          | 90%               | 26%             | 88% |
-| Project Manager | 33%          | 91%               | 35%             | 90% |
-| Data Analyst    | 32%          | 90%               | 33%             | 90% |
-| Program Manager | 24%          | 90%               | 25%             | 90% |
-| Supervisor      | 28%          | 90%               | 27%             | 90% |
-
-------------------------------------------------------------------------
-
-# **But also, are current labels perfect?**
-
-------------------------------------------------------------------------
-
-# What Can We Do With This?
+# What's next?
 
 -   If you're a federal job seeker or researcher/analyst, let's talk!
--   You might have a text classification problem -- and it might be multi-label.
--   Importance of structured outputs and assessment.
-
-------------------------------------------------------------------------
-
-# Necessary Technical Improvements
-
--   Labeling/assessment
--   Revisit clustering
--   More structured LLM responses (possibly with the Marvin library)
+-   If you have a text classification problem you might like LLMs (and Marvin)
