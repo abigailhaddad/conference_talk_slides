@@ -67,7 +67,7 @@ Author: Abigail Haddad Date: October 19, 2023
 # This position is officially titled "Data Scientist"
 
 * My model accurately identified it "Data Engineer"
-* Also, this position is misclassified! It's a 2210
+* Also, this position is misclassified! 🚫🚫🚫
 * This is the kind of analysis we can do with this model
 
 ------------------------------------------------------------------------
@@ -111,12 +111,7 @@ Author: Abigail Haddad Date: October 19, 2023
 -   A way to highlight jobs that might be mislabeled, challenging to hire for, or misclassified
 -   A variable that might be predictive for research and analysis
 
-------------------------------------------------------------------------
-
-# What this can't be
-
--   The one (or more) "true" label
--   A solution to ambiguous duties sections
+This is not the one "true" label 🥇 
 
 ------------------------------------------------------------------------
 
